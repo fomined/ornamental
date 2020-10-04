@@ -1,0 +1,7 @@
+env LOCALE en_US.UTF-8                                      # set locale
+env PDF_VIEW evince %s.pdf                                  # pdf viewer
+env SVG_TO_PDF inkscape --export-pdf=%s.pdf %s.svg          # svg->pdf convertion
+env WORK_DIR ~                                              # set workdir
+env OUTPUT_DIR ~                                            # set output_dir
+window                                                      # open graphical terminal
+

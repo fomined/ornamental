@@ -1,63 +1,49 @@
 TEMPLATE = app
-CONFIG += console c++11
+CONFIG += console c++1z
 CONFIG -= app_bundle
 CONFIG -= qt
-TARGET = ornamental
 
-USER_CXXFLAGS = -std=c++11 -Wall
+QMAKE_CXX = /usr/bin/g++-7
 
-QMAKE_CXXFLAGS_DEBUG += $$USER_CXXFLAGS -D_DEBUG -D_IGNORE
-QMAKE_CXXFLAGS_RELEASE += $$USER_CXXFLAGS -O3 -g 
+USER_CXXFLAGS = -std=c++17
+QMAKE_CXXFLAGS_DEBUG += $$USER_CXXFLAGS
+QMAKE_CXXFLAGS_RELEASE += $$USER_CXXFLAGS -O3 -g
 
-INCLUDEPATH += ./include ./include/prg
+INCLUDEPATH += ./include
 DEPENDPATH += ./include
-
-LIBS += -lrt -lgsl -lgslcblas
-LIBS += \
-	-lboost_system \
-	-lboost_filesystem \
-	-lboost_date_time \
-
-SOURCES += main.cpp \
-    src/flower.structure.cpp \
-	src/test.input.file.cpp \
-	src/data.recovery.cpp \
-    src/math.WLSM.cpp \
-    src/flower.ensemble.cpp \
-    src/flower.dome.cpp \
-    src/plot.flowering.cpp \
-    src/flower.generator.cpp
-
+LIBS += -lgsl -lgslcblas -lcurses
+SOURCES += main.cpp
 HEADERS += \
-    include/flower.structure.h \
-    include/prg/math/prg.distribution.h \
-    include/prg/prg.array.h \
-    include/prg/prg.curve.h \
-    include/prg/prg.defs.h \
-    include/prg/prg.iterator.h \
-    include/prg/prg.logger.h \
-    include/prg/prg.math.h \
-    include/prg/prg.maxmin.h \
-    include/prg/prg.os.h \
-    include/prg/prg.point.h \
-    include/prg/prg.random.h \
-    include/prg/prg.string.h \
-	include/readme.h \
-	include/defs.h \
-	include/math.defs.h \
-	include/math.linalg.h \
-	include/math.statistics.h \
-	include/record.flower.h \
-	include/record.phase.h \
-	include/record.time.h \
-	include/data.recovery.h \
-	include/test.defs.h \
-	include/test.input.file.h \
-    include/math.gnuplot.h \
-    include/math.WLSM.h \
-    include/flower.ensemble.h \
-    include/flower.dome.h \
-    include/readme.experiments.h \
-    include/plot.flowering.h \
-    include/flower.generator.h \
-    include/math.gnuplot.h
+    include/container/vector.h \
+    include/defs.h \
+    include/gnu/colors.h \
+    include/gnu/gnuplot.h \
+    include/gsl/minimizer.h \
+    include/math/WLSM.h \
+    include/math/curve.h \
+    include/math/distribution.h \
+    include/math/math.h \
+    include/math/maxmin.h \
+    include/math/point.h \
+    include/math/random.h \
+    include/math/statistics.h \
+    include/orn/command.h \
+    include/orn/defs.h \
+    include/orn/flower.h \
+    include/orn/flowerdome.h \
+    include/orn/flowerline.h \
+    include/orn/gnuplot.h \
+    include/orn/orn.defs.h \
+    include/orn/phase.h \
+    include/orn/recovery.h \
+    include/orn/scheme.h \
+    include/orn/sprout.h \
+    include/orn/sproutmodel.h \
+    include/orn/svg.h \
+    include/orn/time.h \
+    include/os/command.h \
+    include/os/os.h \
+    include/container/string.h \
+    include/svg/defs.h \
+    include/svg/primitive.h \
+    include/test/logger.h
