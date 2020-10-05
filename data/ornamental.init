@@ -1,0 +1,11 @@
+env LOCALE en_US.UTF-8                                      # set locale
+env PDF_VIEW evince %s.pdf                                  # pdf viewer
+env SVG_TO_PDF inkscape --export-pdf=%s.pdf %s.svg          # svg->pdf convertion
+#
+#
+env WORK_DIR ~/Yandex.Disk/projects/github/ornamental/data  
+env OUTPUT_DIR ~                                            
+window                                                      
+f< C.sarmatica.csv S
+help
+

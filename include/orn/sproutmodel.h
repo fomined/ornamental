@@ -205,7 +205,7 @@ namespace prg
             msg += buf;
         }
         msg += "\n";
-        msg += "\tnormality(α = 0.05): \t";
+        msg += "\tnormality(0.05): \t";
         msg += pvalue > 0.05 ? "yes" : "no";
         return msg;
     }
@@ -232,7 +232,7 @@ namespace prg
             msg += "\tr(X,Y) = " + std::to_string(r) + "\n";
             msg += "\tt (two-tailed t test) = " + std::to_string(t) + "\n";
             msg += "\tpvalue = " + pvalue_as_string(pvalue) + "\n";
-            msg += "\tcorrelation exist(α=0.05): ";
+            msg += "\tcorrelation exist(0.05): ";
             msg += pvalue > 0.05 ? "no" : "yes";
             msg += "\n\n";
         }
@@ -282,13 +282,13 @@ namespace prg
 
             msg += "\tQ (ljung_box test) = " + std::to_string(Q) + "\n";
             msg += "\tpvalue = " + pvalue_as_string(pvalue) + "\n";
-            msg += "\tno correlations(α=0.05): \t";
+            msg += "\tno correlations(0.05): \t";
             msg += pvalue > 0.05 ? "yes" : "no";
             msg += "\n\n";
 
             msg += "\tA2 (anderson_darling test) = " + std::to_string(A2) + "\n";
             msg += "\tpvalue = " + pvalue_as_string(pvalue2) + "\n";
-            msg += "\tnormality of rests(α=0.05): \t";
+            msg += "\tnormality of rests(0.05): \t";
             msg += pvalue2 > 0.05 ? "yes" : "no";
             msg += "\n";
         }
@@ -312,7 +312,7 @@ namespace prg
             msg += "\tr(X,Y) = " + std::to_string(r) + "\n";
             msg += "\tt (two-tailed t test) = " + std::to_string(t) + "\n";
             msg += "\tpvalue = " + pvalue_as_string(pvalue) + "\n";
-            msg += "\tcorrelation exist(α=0.05): ";
+            msg += "\tcorrelation exist(0.05): ";
             msg += pvalue > 0.05 ? "no" : "yes";
             msg += "\n\n";
         }
@@ -351,13 +351,13 @@ namespace prg
 
             msg += "\tQ (ljung_box test) = " + std::to_string(Q) + "\n";
             msg += "\tpvalue = " + pvalue_as_string(pvalue) + "\n";
-            msg += "\tno correlations(α=0.05): \t";
+            msg += "\tno correlations(0.05): \t";
             msg += pvalue > 0.05 ? "yes" : "no";
             msg += "\n\n";
 
             msg += "\tA2 (anderson_darling test) = " + std::to_string(A2) + "\n";
             msg += "\tpvalue = " + pvalue_as_string(pvalue2) + "\n";
-            msg += "\tnormality of rests(α=0.05): \t";
+            msg += "\tnormality of rests(0.05): \t";
             msg += pvalue2 > 0.05 ? "yes" : "no";
             msg += "\n";
         }
